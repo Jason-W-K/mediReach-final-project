@@ -22,27 +22,62 @@ app.set('socketio', io);
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log('MongoDB connected'))
-  .catch(err => console.error('MongoDB error:', err));
-
 // Socket.IO connection
 io.on('connection', (socket) => {
-  console.log('Socket connected:', socket.id);
+  console.log('🔌 Socket connected:', socket.id);
+
+  // Appointment events
+  socket.on('appointmentAdded', (appt) => {
+    io.emit('appointmentAdded', appt);
+  });
+
+  socket.on('appointmentCancelled', (appt) => {
+    io.emit('appointmentCancelled', appt);
+  });
+
+  // ✅ Chat events
+  socket.on('joinRoom', (roomId) => {
+    socket.join(roomId);
+    console.log(`🟢 ${socket.id} joined room ${roomId}`);
+  });
+
+  socket.on('sendMessage', ({ roomId, sender, message }) => {
+    io.to(roomId).emit('receiveMessage', {
+      sender,
+      message,
+      timestamp: Date.now(),
+    });
+  });
 });
 
-// Routes
+// Route imports
+const authRoutes = require('./routes/auth');
 const appointmentRoutes = require('./routes/appointments');
-app.use('/api/appointments', appointmentRoutes);
+const doctorRoutes = require('./routes/doctors');
 
-// Root route
-app.get('/', (req, res) => {
-  res.send('MediReach backend is running');
-});
+// MongoDB connection and server start
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log('✅ MongoDB connected');
 
-// Start server
-const PORT = process.env.PORT || 5000;
-http.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    // Mount routes after DB is ready
+    app.use('/api', authRoutes);
+    app.use('/api/appointments', appointmentRoutes);
+    app.use('/api/doctors', doctorRoutes);
+
+    // Root route
+    app.get('/', (req, res) => {
+      res.send('MediReach backend is running');
+    });
+
+    // Start server
+    const PORT = process.env.PORT || 5000;
+    http.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error('❌ MongoDB connection error:', err);
+    process.exit(1);
+  });

@@ -1,13 +1,92 @@
-nav {
-  background-color: #0077cc;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-nav h2 {
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.medireach-icon {
+  height: 40px;
+  margin-right: 1rem;
+  border-radius: 6px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
+.logo-text h2 {
   margin: 0;
-  font-size: 1.8rem;
+  color: #d32f2f;
+  font-size: 1.5rem;
+}
+
+.motto {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #1976d2;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #b71c1c;
+}
+
+/* 🔓 Logout button style */
+.logout-button {
+  background-color: #555;
+}
+
+.logout-button:hover {
+  background-color: #333;
+}
+
+/* 👤 Welcome text style */
+.welcome-text {
+  font-size: 1rem;
+  color: #1976d2;
+  font-weight: 500;
+  margin-right: 0.5rem;
 }

@@ -1,0 +1,230 @@
+.dashboard {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+}
+
+.dashboard h2 {
+  font-size: 2rem;
+  color: #d32f2f;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Shared Section Styling */
+.dashboard-section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+/* Patient Profile Snapshot */
+.patient-profile h3 {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Upcoming Appointment Section */
+.upcoming-appointment h3 {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.appointment-card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.countdown {
+  color: #0077b6;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.appointment-actions {
+  margin-top: 1rem;
+}
+
+.appointment-actions button {
+  margin-right: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.reschedule {
+  background-color: #1976d2;
+  color: white;
+}
+
+.reschedule:hover {
+  background-color: #125ea3;
+}
+
+.cancel {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.cancel:hover {
+  background-color: #b71c1c;
+}
+
+/* Smart Reminders Section */
+.smart-reminders h3 {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.reminder-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reminder-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #333;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.reminder-list li::before {
+  content: '🔔';
+  position: absolute;
+  left: 0;
+}
+
+/* Health Summary Section */
+.health-summary h3 {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.summary-card {
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.summary-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.summary-card p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+/* Quick Access Shortcuts */
+.quick-actions h3 {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.action-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.action-grid button {
+  flex: 1 1 200px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #e3f2fd;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #0d47a1;
+}
+
+.action-grid button:hover {
+  background-color: #bbdefb;
+}
+
+/* Notifications & Messages */
+.notifications h3 {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.notification-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.notification-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #333;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.notification-list li::before {
+  content: '📥';
+  position: absolute;
+  left: 0;
+}
+
+/* Appointment List */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+li button {
+  margin-top: 0.5rem;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+li button:hover {
+  background-color: #b71c1c;
+}

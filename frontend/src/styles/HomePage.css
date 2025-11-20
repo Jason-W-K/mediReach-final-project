@@ -1,0 +1,128 @@
+.home-container {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+/* Hero Section Grid Layout */
+.hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+}
+
+/* Left Panel */
+.hero-left {
+  flex: 1;
+  background-color: #0077b6;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-left .subtext {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Right Panel */
+.hero-right {
+  flex: 1;
+  position: relative;
+}
+
+.image-box {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Overlay Card */
+.overlay-card {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 300px;
+}
+
+.overlay-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.overlay-card p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Buttons */
+.cta-button,
+.cta-buttons button {
+  background-color: #d62828;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-buttons button:hover {
+  background-color: #a4161a;
+}
+
+/* Info Sections */
+.about,
+.how-it-works,
+.cta-section {
+  margin-top: 3rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+/* Steps Section */
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.step {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}

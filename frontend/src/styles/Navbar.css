@@ -1,3 +1,6 @@
+/* =========================
+   Navbar Base Styles (Desktop)
+   ========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -89,4 +92,54 @@
   color: #1976d2;
   font-weight: 500;
   margin-right: 0.5rem;
+}
+
+/* =========================
+   Responsive Styles (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-left {
+    margin-bottom: 1rem;
+  }
+
+  .logo-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .motto {
+    font-size: 0.8rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .nav-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .welcome-text {
+    font-size: 0.9rem;
+  }
 }

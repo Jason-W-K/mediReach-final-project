@@ -1,3 +1,6 @@
+/* =========================
+   Homepage Base Styles (Desktop)
+   ========================= */
 .home-container {
   font-family: 'Segoe UI', sans-serif;
   padding: 2rem;
@@ -125,4 +128,58 @@
   flex: 1;
   min-width: 200px;
   text-align: center;
+}
+
+/* =========================
+   Responsive Styles (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+  .hero-grid {
+    flex-direction: column;       /* stack hero panels */
+    padding: 1rem;
+  }
+
+  .hero-left {
+    padding: 1.5rem;
+  }
+
+  .hero-left h1 {
+    font-size: 1.8rem;            /* shrink heading */
+  }
+
+  .hero-left p {
+    font-size: 1rem;
+  }
+
+  .hero-left .subtext {
+    font-size: 0.85rem;
+  }
+
+  .hero-right {
+    margin-top: 1rem;
+  }
+
+  .overlay-card {
+    position: static;             /* remove absolute positioning */
+    margin-top: 1rem;
+    max-width: 100%;              /* full width on mobile */
+  }
+
+  .overlay-card h3 {
+    font-size: 1rem;
+  }
+
+  .overlay-card p {
+    font-size: 0.85rem;
+  }
+
+  .steps {
+    flex-direction: column;       /* stack steps vertically */
+    align-items: center;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 300px;
+  }
 }

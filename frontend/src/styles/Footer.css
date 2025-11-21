@@ -1,3 +1,6 @@
+/* =========================
+   Footer Base Styles (Desktop)
+   ========================= */
 footer {
   background-color: #0077cc;
   color: white;
@@ -5,4 +8,35 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
   font-size: 0.9rem;
+  font-family: 'Segoe UI', sans-serif;
+  border-top: 3px solid #005fa3; /* subtle accent line */
+}
+
+/* Links inside footer */
+footer a {
+  color: #ffeb3b;               /* bright contrast for links */
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff176;               /* lighter yellow on hover */
+  text-decoration: underline;
+}
+
+/* =========================
+   Responsive Styles (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.8rem;          /* slightly smaller text */
+    padding: 0.75rem;           /* tighter padding */
+  }
+
+  footer a {
+    display: block;             /* stack links vertically */
+    margin: 0.25rem 0;
+  }
 }

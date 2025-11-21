@@ -1,3 +1,6 @@
+/* =========================
+   Chat Box Base Styles (Desktop)
+   ========================= */
 .chat-box {
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -48,4 +51,36 @@
 
 .chat-input button:hover {
   background-color: #125ea3;
+}
+
+/* =========================
+   Responsive Styles (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+  .chat-box {
+    height: auto;               /* allow chat box to grow naturally */
+    max-height: 70vh;           /* prevent it from taking entire screen */
+    padding: 0.75rem;
+  }
+
+  .chat-messages {
+    font-size: 0.9rem;          /* slightly smaller text */
+    margin-bottom: 0.75rem;
+  }
+
+  .chat-input {
+    flex-direction: column;     /* stack input and button vertically */
+    gap: 0.5rem;
+  }
+
+  .chat-input input {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .chat-input button {
+    width: 100%;                /* full-width button for easy tapping */
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
 }

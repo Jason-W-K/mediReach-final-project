@@ -1,3 +1,6 @@
+/* =========================
+   New Appointment Form Base Styles (Desktop)
+   ========================= */
 .new-appointment-form {
   display: flex;
   gap: 1rem;
@@ -11,6 +14,7 @@
   border-radius: 4px;
   flex: 1;
   min-width: 150px;
+  font-size: 1rem;
 }
 
 .new-appointment-form button {
@@ -20,4 +24,33 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.new-appointment-form button:hover {
+  background-color: #005fa3;
+}
+
+/* =========================
+   Responsive Styles (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+  .new-appointment-form {
+    flex-direction: column;   /* stack inputs and button vertically */
+    gap: 0.75rem;
+  }
+
+  .new-appointment-form input {
+    width: 100%;              /* full-width inputs */
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .new-appointment-form button {
+    width: 100%;              /* full-width button for easy tapping */
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
 }

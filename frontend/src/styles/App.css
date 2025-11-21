@@ -1,18 +1,49 @@
-body {
+/* Global Reset */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+/* Body */
+body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f4f6f8;
   color: #333;
+  line-height: 1.6;
 }
 
+/* Headings */
 h1, h2 {
   margin: 1rem 0;
+  font-weight: 600;
 }
 
+/* Paragraphs */
 p {
   margin: 0.5rem 0 1.5rem;
 }
 
-div {
+/* Containers */
+.container {
   padding: 1rem 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
 }

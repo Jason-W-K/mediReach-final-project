@@ -1,3 +1,6 @@
+/* =========================
+   Services Page Base Styles (Desktop)
+   ========================= */
 .services-container {
   padding: 2rem;
   background-color: #f9f9f9;
@@ -66,4 +69,47 @@
 
 .book-button:hover {
   background-color: #005f8e;
+}
+
+/* =========================
+   Responsive Styles (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+  .services-container {
+    padding: 1rem;              /* reduce padding */
+  }
+
+  .services-container h2 {
+    font-size: 1.6rem;          /* shrink heading */
+    margin-bottom: 1rem;
+  }
+
+  .intro-text {
+    font-size: 0.95rem;         /* smaller intro text */
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* stack service cards vertically */
+    gap: 1rem;
+  }
+
+  .service-card {
+    padding: 1rem;              /* tighter card padding */
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
+
+  .book-button {
+    width: 100%;                /* full-width button for easy tapping */
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
 }

@@ -1,3 +1,6 @@
+/* =========================
+   Dashboard Base Styles (Desktop)
+   ========================= */
 .dashboard {
   padding: 2rem;
   font-family: 'Segoe UI', sans-serif;
@@ -227,4 +230,54 @@ li button {
 
 li button:hover {
   background-color: #b71c1c;
+}
+
+/* =========================
+   Responsive Styles (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard h2 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard p {
+    font-size: 0.9rem;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;   /* stack profile items */
+  }
+
+  .summary-grid {
+    grid-template-columns: 1fr;   /* stack summary cards */
+  }
+
+  .appointment-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .appointment-actions button {
+    width: 100%;                  /* full-width buttons */
+    margin-right: 0;
+  }
+
+  .action-grid {
+    flex-direction: column;       /* stack quick action buttons */
+  }
+
+  .action-grid button {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .reminder-list li,
+  .notification-list li {
+    font-size: 0.9rem;
+  }
 }

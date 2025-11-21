@@ -1,7 +1,90 @@
+/* =========================
+   Doctor Appointment Page Base Styles (Desktop)
+   ========================= */
 .appointment-page {
   max-width: 600px;
   margin: auto;
   padding: 2rem;
   background: #f9f9f9;
   border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Headings */
+.appointment-page h2 {
+  text-align: center;
+  color: #d32f2f;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Form Styling */
+.appointment-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.appointment-page input,
+.appointment-page select,
+.appointment-page textarea {
+  padding: 0.9rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-page input:focus,
+.appointment-page select:focus,
+.appointment-page textarea:focus {
+  border-color: #0077b6;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+}
+
+/* Submit Button */
+.appointment-page button {
+  background-color: #d32f2f;
+  color: white;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-page button:hover {
+  background-color: #b71c1c;
+}
+
+/* =========================
+   Responsive Styles (Mobile)
+   ========================= */
+@media (max-width: 768px) {
+  .appointment-page {
+    max-width: 95%;          /* shrink container width */
+    padding: 1.5rem;         /* reduce padding */
+  }
+
+  .appointment-page h2 {
+    font-size: 1.5rem;       /* shrink heading */
+    margin-bottom: 1rem;
+  }
+
+  .appointment-page input,
+  .appointment-page select,
+  .appointment-page textarea {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .appointment-page button {
+    width: 100%;             /* full-width button for easy tapping */
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
 }
